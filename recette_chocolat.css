@@ -1,3 +1,7 @@
+* {
+  overflow: auto;
+}
+
 body {
   background-color: #8ba1bb;
   font-family: Arial;
@@ -6,9 +10,9 @@ body {
 
 div.contenu {
   background-color: white;
-  margin: 8% 12% 8% 12%;
-  padding: 0% 5% 5% 5%;
-  min-width: 320px;
+  margin: 8% 2% 5% 2%;
+  padding: 0% 8px 20px 8px;
+
   box-shadow: 0px 0px 10px black;
   overflow: visible;
 }
@@ -33,9 +37,9 @@ p.categorie {
   background-color: black;
   color: white;
   display: inline-block;
-  margin-top: -10%;
+  margin-top: -20px;
   padding: 8px 18px;
-  margin-bottom: -10%;
+  margin-bottom: 0px;
   font-weight: bold;
   font-size: 16px;
 }
@@ -59,15 +63,15 @@ div.ligne {
   width: 100%;
   color: white;
   background-color: #6c829dc0;
-  height: 80px;
+  height: 50px;
 }
 .tableau td {
   text-align: center;
-  font-size: 15px;
+  font-size: 12px;
   vertical-align: top;
 }
 .tableau th {
-  font-size: 16px;
+  font-size: 14px;
   vertical-align: bottom;
   padding: 5px;
 }
@@ -80,7 +84,7 @@ img.info {
 }
 
 div.colonne {
-  width: 45%;
+  width: 100%;
   margin-top: 5%;
 }
 .colonne h2 {
@@ -92,9 +96,6 @@ div.colonne {
 }
 .colonne1 {
   display: inline-block;
-}
-.colonne2 {
-  float: right;
 }
 
 div.liste1 p {
@@ -119,7 +120,7 @@ table.liste2 p.numero {
   box-sizing: border-box;
   padding-top: 5px;
   border-radius: 50%;
-  margin: 10%;
+  margin: 2% 5% 5% 5%;
 }
 
 table.liste2 td.preparation_etape {
@@ -129,4 +130,41 @@ table.liste2 td.preparation_etape {
 }
 table.liste2 tr {
   height: 40px;
+}
+
+/* style pour ordinateur*/
+
+@media only screen and (min-width: 740px) {
+  div.contenu {
+    margin: 8% 12% 8% 12%;
+    padding: 0% 5% 5% 5%;
+    min-width: 320px;
+  }
+  .tableau {
+    height: 80px;
+  }
+  .tableau th {
+    font-size: 16px;
+  }
+  .tableau td {
+    font-size: 15px;
+  }
+  div.colonne {
+    width: 45%;
+  }
+
+  .colonne1 {
+    margin-right: 10%;
+  }
+  .colonne2 {
+    float: right;
+  }
+}
+@media only screen and (min-width: 900px) {
+  div.contenu {
+    margin-left: auto;
+    margin-right: auto;
+
+    min-width: 645px;
+  }
 }
